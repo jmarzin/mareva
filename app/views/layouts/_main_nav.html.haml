@@ -1,0 +1,8 @@
+= content_for :main_navigation do
+  %nav#main_nav{:role => "navigation"}
+    %ul
+      = nav_tab('Accueil', root_path, current: current_tab)
+      = nav_tab('Projets', '#', current: current_tab)
+      = nav_tab('Etudes','#', current: current_tab)
+      = nav_tab('Habilitations', '#', current: current_tab)
+      = nav_tab('Paramètrage', '#', current: current_tab)

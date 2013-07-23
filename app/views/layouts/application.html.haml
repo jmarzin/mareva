@@ -10,6 +10,12 @@
     = render 'layouts/header'
     %div.container
       %section#content
+        -if notice
+          %p.notification.notice=notice
+        -if alert
+          %p.notification.alert=alert
         = yield
-      %section#sidebar
+      -if content_for?(:sidebar)
+        %section#sidebar
+          = yield :sidebar
     = render 'layouts/footer'
