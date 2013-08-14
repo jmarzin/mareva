@@ -1,9 +1,9 @@
-%h2 Sign in
+%h2 Connexion
 = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   .form-inputs
-    = f.input :email, :required => false, :autofocus => true
-    = f.input :password, :required => false
-    = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
+    = f.input :email,label: 'Adresse de messagerie',:required => false, :autofocus => true
+    = f.input :password, label: 'Mot de passe',:required => false
+    = f.input :remember_me, label: 'Se souvenir de moi',:as => :boolean if devise_mapping.rememberable?
   .form-actions
-    = f.button :submit, "Sign in"
+    = f.button :submit, "Connexion"
 = render "devise/shared/links"
