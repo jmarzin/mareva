@@ -1,7 +1,9 @@
 %header#page_header{:role => "banner"}
   %nav#utility
     -if user_signed_in?
-      Vous êtes <strong>Sam Spade</strong>​​
+      Vous êtes <strong>
+      =current_user.email
+      </strong>​​
       =link_to('[Votre compte]', '#')
       \|
       =link_to( '[Déconnexion]', '#')

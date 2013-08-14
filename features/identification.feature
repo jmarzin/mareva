@@ -13,9 +13,19 @@ Fonctionnalité: Identification des utilisateurs
     Quand je suis sur la page /
     Quand je suis le lien [Connexion]
     Alors je vois le texte "Créer un compte"
-@encours
+
   Scénario: Au lancement de l'application, je peux créer un compte
     Quand je suis sur la page /
     Quand je suis le lien [Connexion]
     Quand je suis le lien Créer un compte
     Alors je vois le texte "Création d'un compte"
+
+  Scénario: Création d'un compte utilisateur
+    Quand je suis sur la page /
+    Quand je suis le lien [Connexion]
+    Quand je suis le lien Créer un compte
+    Quand je saisis l'adresse jacques.marzin@free.fr et le mot de passe 51julie2
+    Quand je clique sur le bouton Créer le compte
+    Alors je me retrouve sur la page /
+    Et je vois le texte "jacques.marzin@free.fr"
+    Et je vois le texte "Bienvenue ! Votre compte a été créé."
