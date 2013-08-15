@@ -6,7 +6,7 @@
       </strong>​​
       =link_to('[Votre compte]', '#')
       \|
-      =link_to( '[Déconnexion]', '#')
+      =link_to( '[Déconnexion]', destroy_user_session_path, :method => :delete)
     -else
       Vous n'êtes pas connecté(e)
       =link_to('[Connexion]', new_user_session_path)
